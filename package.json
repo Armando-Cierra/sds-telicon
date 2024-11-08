@@ -1,0 +1,32 @@
+{
+  "name": "sds-telicon",
+  "version": "3.1.1",
+  "description": "",
+  "main": "telicon.svg",
+  "scripts": {
+    "prepare": "husky install",
+    "start:website": "./scripts/start-website.bash",
+    "build:website": "./scripts/build-website.bash",
+    "deploy:website": "gh-pages -d dist",
+    "build": "./scripts/build.bash",
+    "release": "release-it --npm.skipChecks"
+  },
+  "author": "Josh Sanders & Armando Cierra",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "gh-pages": "^5.0.0",
+    "gulp": "4.0.2",
+    "gulp-filenames-to-json": "0.1.2",
+    "gulp-rename": "2.0.0",
+    "gulp-svg-symbols": "3.2.3",
+    "husky": "^8.0.0",
+    "release-it": "^15.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {}
+}

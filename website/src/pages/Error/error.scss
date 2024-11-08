@@ -1,0 +1,18 @@
+@import 'node_modules/@sipster/core/tools';
+
+.error404 {
+  @include sds-flex(center, center, column);
+  width: 100%;
+  height: 100vh;
+  .sipsterLogo {
+    color: var(--sds_theme_icon_subtle);
+    height: 100px;
+    margin-bottom: sds-spc(24);
+  }
+  h1 {
+    margin-bottom: sds-spc(8);
+  }
+  p {
+    margin-bottom: sds-spc(24);
+  }
+}

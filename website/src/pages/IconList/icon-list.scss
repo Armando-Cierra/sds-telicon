@@ -1,0 +1,86 @@
+@import 'node_modules/@sipster/core/tools';
+
+.iconList {
+  padding-top: 84px;
+  padding-bottom: 80px;
+  .searchBar {
+    position: sticky;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    background: var(--sds_theme_background);
+    border-bottom: 1px solid var(--sds_theme_border);
+    margin-bottom: sds-spc(24);
+    padding: sds-spc(16) 0;
+    .container {
+      @include sds-flex(space-between, center);
+      h2 {
+        flex-shrink: 0;
+        margin-right: sds-spc(16);
+      }
+      .sds_Search {
+        width: 100%;
+        max-width: 500px;
+      }
+      @include sds-screen(md) {
+        h2 {
+          @include sds-typeset(heading-2, semi);
+        }
+      }
+      @include sds-screen(sm) {
+        h2 {
+          @include sds-typeset(body-lg, semi);
+        }
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 sds-spc(16);
+    .list {
+      @include sds-grid(4, sds-spc(24));
+      @include sds-screen(md) {
+        @include sds-grid(3, sds-spc(24));
+      }
+      @include sds-screen(sm) {
+        @include sds-grid(2, sds-spc(12));
+      }
+      @include sds-screen(xs) {
+        @include sds-grid(1, sds-spc(12));
+      }
+
+      padding-bottom: sds-spc(64);
+      .card {
+        display: flex;
+        align-items: center;
+        gap: sds-spc(8);
+        padding: sds-spc(16);
+        border: 1px solid var(--sds_theme_border);
+        border-radius: sds-spc(4);
+        background: var(--sds_theme_background_high);
+        cursor: pointer;
+        transition: ease-in-out 0.25s;
+        .sds_Telicon,
+        span {
+          pointer-events: none;
+          color: var(--sds_theme_text);
+        }
+        &:hover {
+          @include sds-shadow(md);
+          transform: scale(1.05);
+          border-color: var(--sds_theme_color_primary);
+          span,
+          .sds_telicon {
+            color: var(--sds_theme_color_primary);
+          }
+        }
+        &:active {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+}

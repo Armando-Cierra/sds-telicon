@@ -1,0 +1,83 @@
+@import 'node_modules/@sipster/core/tools';
+
+.home {
+  @include sds-flex(flex-start, center);
+  @include sds-screen(sm) {
+    @include sds-flex(center, center);
+  }
+  border-top: 4px solid var(--sds_theme_color_primary);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 sds-spc(24);
+    .logo {
+      @include sds-flex(flex-start, center);
+      @include sds-screen(sm) {
+        @include sds-flex(center, center);
+      }
+      margin-bottom: sds-spc(40);
+      color: var(--sds_theme_text);
+      .teliconLogo {
+        @include sds-screen(xs) {
+          height: 70px;
+        }
+        color: var(--sds_theme_color_primary);
+        height: 120px;
+        margin-right: 1.5rem;
+      }
+      h1 {
+        @include sds-screen(xs) {
+          font-size: 2.5rem;
+        }
+        font-size: 5rem;
+      }
+    }
+    .content {
+      p {
+        margin-bottom: sds-spc(16);
+      }
+      .buttonBox {
+        display: flex;
+        gap: sds-spc(8);
+        margin-bottom: sds-spc(16);
+        @include sds-screen(sm) {
+          @include sds-flex(center, center);
+          margin-bottom: sds-spc(64);
+        }
+        @include sds-screen(xs) {
+          flex-direction: column;
+        }
+        .sds_button {
+          @include sds-screen(xs) {
+            margin-right: 0;
+            &:last-child {
+              margin-top: sds-spc(16);
+            }
+          }
+        }
+      }
+      @include sds-screen(sm) {
+        p {
+          text-align: center;
+        }
+        .colormode {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .sipsterLogo {
+    position: absolute;
+    z-index: -1;
+    color: var(--sds_theme_icon);
+    opacity: 0.1;
+    height: 90%;
+    top: 15%;
+    right: -20%;
+  }
+}

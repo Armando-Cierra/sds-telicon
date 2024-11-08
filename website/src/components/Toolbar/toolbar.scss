@@ -1,0 +1,39 @@
+@import 'node_modules/@sipster/core/tools';
+
+.toolbar {
+  @include sds-flex(space-between, center);
+  @include sds-shadow(md);
+  @include sds-index(app-nav);
+  border-top: 4px solid var(--sds_theme_color_primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: sds-spc(32);
+  height: 84px;
+  background: var(--sds_theme_background_high);
+  margin-top: -84px;
+  transition: sds-transition(standard, enviromental);
+  .logo {
+    @include sds-flex(center, center);
+    height: 80%;
+    .teliconLogo {
+      height: 50px;
+      margin-right: sds-spc(16);
+      color: var(--sds_theme_color_primary);
+    }
+    span {
+      flex-shrink: 0;
+      font-family: 'STIX Two Math', serif;
+      color: var(--sds_theme_text);
+      font-size: 2.5rem;
+      @include sds-screen(xs) {
+        display: none;
+      }
+    }
+  }
+}
+
+.showToolbar {
+  margin-top: 0;
+}

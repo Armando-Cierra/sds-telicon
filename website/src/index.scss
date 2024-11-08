@@ -1,0 +1,11 @@
+@import 'node_modules/@sipster/core/tools';
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap');
+
+body {
+  min-height: 100vh;
+  background: var(--sds_theme_background);
+}
+
+.logoText {
+  font-family: 'STIX Two Math', serif;
+}

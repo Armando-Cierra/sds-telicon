@@ -1,0 +1,38 @@
+{
+  "name": "telicon-test",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://2600hz.github.io/sds-telicon",
+  "dependencies": {
+    "@sipster/core": "^3.2.3",
+    "@sipster/react-button": "^1.5.0",
+    "@sipster/react-telicon": "^1.3.3",
+    "@sipster/react-text": "^1.2.0",
+    "@sipster/react-text-input": "^1.4.1",
+    "@sipster/react-toast": "^1.4.0",
+    "@sipster/telicon": "^3.1.1",
+    "@sipster/themes": "^3.5.3",
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@parcel/config-default": "^2.8.3",
+    "@parcel/plugin": "^2.0.0",
+    "@parcel/transformer-sass": "2.8.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-router-dom": "^5.3.3",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.8.3",
+    "parcel-resolver-ts-base-url": "^1.3.1",
+    "process": "^0.11.10",
+    "sass": "^1.71.1",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  }
+}

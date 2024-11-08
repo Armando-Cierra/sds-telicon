@@ -1,0 +1,57 @@
+@import 'node_modules/@sipster/core/tools';
+
+.colormode {
+  display: flex;
+  align-items: center;
+  gap: sds-spc(16);
+  .textBox {
+    display: flex;
+    align-items: center;
+    gap: sds-spc(8);
+  }
+  .options {
+    display: flex;
+    align-items: center;
+    gap: sds-spc(8);
+    div {
+      width: sds-spc(32);
+      height: sds-spc(32);
+      background: var(--sds_theme_color_neutral_tint_2);
+      border-radius: 50%;
+      border: 1px solid var(--sds_theme_border);
+      cursor: pointer;
+    }
+    .active {
+      box-shadow: 0 0 0 3px var(--sds_theme_color_primary);
+    }
+    .auto {
+      position: relative;
+      overflow: hidden;
+      transform: rotate(45deg);
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: sds-spc(32);
+        height: sds-spc(32);
+      }
+      &::after {
+        bottom: 50%;
+        background: sds-color(neutral, 10);
+      }
+      &::before {
+        top: 50%;
+        background: sds-color(neutral, 80);
+      }
+    }
+    .light {
+      background: sds-color(white);
+    }
+    .dark {
+      background: sds-color(neutral, 80);
+    }
+    .default {
+      background: sds-color(neutral, 10);
+    }
+  }
+}
